@@ -1,0 +1,510 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    scroll-behavior: smooth;
+}
+
+/* header div */
+
+header{
+    background-color: lightgrey;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:10px ;
+    padding-left: 30px;
+    position: fixed;
+    z-index: 999;
+}
+
+/* header first div */
+
+.navbar1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;   
+}
+
+.navbar1 img{
+    width:350px;
+    height:80px;
+}
+
+header label{
+    display: none;
+    padding-top:10px;
+    font-size: 20px;
+}
+
+header a{
+    padding: 5px 20px 5px;
+    border-radius: 3px;
+    text-decoration-line: none;
+}
+
+header a:hover{
+      background-color: rgb(40, 5, 136);
+      color:white;
+}
+
+header input{
+    display:none;
+}
+
+input:checked~div{
+    transition-duration:2s ; 
+    left:0;
+    background-color: rgb(241, 202, 144);
+}
+
+/* header second div */
+
+.navbar2{
+    width:50%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+} 
+
+/* Mobile & Tablet view */
+
+@media only screen and (max-width:800px){
+    .navbar1 img{
+        width:200px;
+        height:50px;
+    }
+    .navbar2{
+        height:100vh;
+        width:100%;
+        gap:20px;
+        position: fixed;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        top:70px;
+        padding-top:50px;
+        left:100%;
+    }
+    header label{
+        display:block;
+    }
+}
+
+/* first div */
+
+.overall{
+    width:100%;
+    background: url("https://static.wixstatic.com/media/2eae99_7a08100b80b84c4fa55bb9e6a5d04cd3~mv2.jpg/v1/fill/w_1349,h_400,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/NOBEL-Front.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.overall h1{
+    height:650px;
+    width:100%;
+    text-align: center;
+    padding-top: 300px;
+    font-size: 80px;
+    color: rgb(8, 8, 145);
+    text-shadow: 5px 5px 5px white;
+}
+
+.overall h1:hover{
+    text-shadow: 5px 5px 5px blue;
+    color:white;
+    transform: scale(1.2);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+/* 1 - overall div */
+
+.box{
+    display:flex;
+    align-items: center;
+    width:100%;
+    padding-left: 20px;
+}
+
+/* form div */
+
+.box1{
+    width:50%;
+    min-height:100vh;
+    display:flex;
+    position: relative;
+   
+}
+
+.box1 i{
+    position: absolute;
+    padding:10px;
+    background-color: white;
+    right:115px;
+}
+
+.icon1{
+    top:83px;
+}
+
+.icon2{
+    top:175px;
+}
+
+.icon3{
+     top:265px;
+}
+
+form{
+    padding:50px 50px 30px;
+    width:95%;
+    background-color: rgb(175, 228, 238);
+    border-radius: 10px; 
+}
+
+form label{
+    padding: 8px;
+    line-height: 30px;
+}
+
+/* input */
+
+.box3{
+    padding: 13px 10px;
+    width:95%;
+    margin-bottom: 15px;
+}
+
+textarea{
+    width:95%;
+}
+
+/* checkbox */
+
+.one{
+    margin-top:10px;
+    border:none;
+}
+
+.two{
+    margin-top:10px; 
+    padding-left: 10px;
+    font-size: 17px;
+}
+
+.word2{
+    color: blue;
+    text-decoration: underline;
+}
+
+.word2:hover{
+    color:white;
+    background-color: rgb(3, 3, 85);
+    padding: 3px;
+    transition: all 1s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.word1{
+    color:rgb(243, 109, 60);
+    text-decoration:underline ;
+}
+
+.word1:hover{
+    color:white;
+    background-color: red;
+    padding: 3px;
+    transform: scale(1.1);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+/* button */
+
+button{
+    padding:10px;
+    width:120px;
+    margin-top:20px;
+    margin-left:150px;
+    border:none;
+    border-radius: 3px;
+    background-color: red;
+    color:white;
+}
+
+button:hover{
+    transform: scale(1.2);
+    transition: all 1s;
+    background-color: rgb(7, 7, 99);
+    cursor: pointer;
+}
+
+/* Mobile view */
+
+@media only screen and (max-width:500px){
+    .box{
+        flex-direction: column;
+        width:103%;
+        padding-left: 3px;
+    }
+    .box1{
+        width:100%;
+    }
+    .box1 i{
+        right:14%;
+    }
+    .icon1{
+        top:7%;
+    }
+    .icon2{
+        top:20%;
+    }
+    .icon3{
+        top:33%;
+    }
+    form{
+        padding: 20px 13px  30px;
+    }
+    form label{
+        line-height: 0px;
+    }
+    button{
+        margin-left: 33%;
+    }
+}
+
+/* Tablet view */
+
+@media only screen and (min-width:500px) and (max-width:800px){
+    .box{
+        flex-direction: column;
+    }
+    .box1{
+        width:80%;
+    }
+    .box1 i{
+        right:18%;
+    }
+}
+
+/* Laptop view */
+
+@media only screen and (min-width:800px) and (max-width:1200px){
+    .box1 i{
+        right:19%;
+    }
+}
+
+/* address div */
+
+.box2{
+    width:48%;
+    background-color:rgb(175, 228, 238);
+    border-radius: 10px;
+    padding: 50px 30px;
+}
+
+.icon5{
+    display:flex;
+    padding:  30px;
+}
+
+.icon5 i{
+    font-size: 40px;
+    padding-right: 30px;
+    color: rgb(60, 60, 241);
+}
+
+.icon5 i:hover{
+    color:red;
+    cursor: pointer;
+}
+
+.icon5 p{
+    font-size: 20px;
+    line-height: 25px;
+    color:rgb(248, 26, 26);
+}
+
+/* Mobile view */
+
+@media only screen and (max-width:500px){
+    .box2{
+        width:95%;
+        margin-top: 30px;
+        margin-right: 12px;
+    }
+    .icon5{
+        padding:0px;
+        padding-top: 20px;
+    }
+}
+
+/* Tablet view */
+
+@media only screen and (min-width:500px) and (max-width:800px){
+    .box2{
+        width:77%;
+        margin-top: 30px;
+        margin-right: 15px;
+    }
+}
+
+/* location div */
+
+.map iframe{
+    width:100%;
+    height:600px;
+    padding: 30px;
+}
+
+.map iframe:hover{
+    transform: scale(0.9);
+}
+
+
+/* footer */
+
+footer{
+    padding:50px 20px 80px;
+    background-color: rgb(251, 174, 253);
+    overflow: hidden;
+}
+
+.img{
+    width:100%;
+    height:100px;
+    display:grid;
+    justify-content: center;
+}
+
+.img img{
+    width:300px;
+    height:50px;
+    overflow: hidden;
+}
+
+.img:hover{
+    transform: scale(1.1);
+    transition: 1s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.footer{
+    display:grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.footer h3{
+    padding-bottom: 13px;
+}
+
+.footer div:nth-child(1) h3{
+    color: chocolate;
+    cursor: pointer;
+}
+
+.footer div:nth-child(2) h3{
+    color:red;
+    cursor: pointer;
+}
+
+.footer div:nth-child(3) h3{
+    color:blue;
+    cursor: pointer;
+}
+
+.footer div:nth-child(4) h3{
+    color:crimson;
+    cursor: pointer;
+}
+
+.footer div:nth-child(5) h3{
+    color:rgb(4, 122, 14);
+    cursor: pointer;
+}
+
+.footer p{
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.footer a{
+    text-decoration: underline;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer a:hover{
+    color:rgb(3, 3, 110);
+    font-weight: 700;
+}
+
+.footer i:hover{
+    background-color: red;
+    transform: scale(1.1);
+    transition: all 1s;
+    cursor: pointer;
+}
+
+/* icon */
+
+.face{
+    border-radius: 48%;
+    font-size: 25px;
+    padding: 13px 17px;
+    background-color: rgb(11, 4, 116);
+    color:white;
+}
+
+.insta{
+    font-size: 25px;
+    padding: 13px;
+    background-color: rgb(11, 4, 116);
+    border-radius: 50%;
+    color:white;
+    margin-left: 5px;
+}
+
+/* Mobile view */
+
+@media only screen and (min-width:300px) and (max-width:500px){
+   .footer{
+    grid-template-columns: auto;
+   }
+   .footer div{
+    padding-top: 50px;
+   }
+}
+
+/* Tablet view */
+
+@media only screen and (min-width:500px) and (max-width:800px){
+    .footer{
+        grid-template-columns: auto auto;
+    }
+    .footer div{
+        padding-top: 50px;
+    }
+}
+
+/* Laptop view */
+
+@media only screen and (min-width:800px) and (max-width:1200px){
+    .footer{
+        grid-template-columns: auto auto auto;
+    }
+    .footer div{
+        padding-top: 50px;
+    }
+}
